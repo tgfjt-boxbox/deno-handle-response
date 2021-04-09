@@ -27,7 +27,7 @@ async function handleRequest(request: Request) {
           err: e.message,
         }),
         {
-          status: 500,
+          status: 400,
           headers: {
             "content-type": "application/json; charset=utf-8",
             ...respHeaders
@@ -58,7 +58,7 @@ async function handleRequest(request: Request) {
         err: 'invalid token.',
       }),
       {
-        status: 500,
+        status: 400,
         headers: {
           "content-type": "application/json; charset=utf-8",
           ...respHeaders
